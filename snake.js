@@ -2,7 +2,7 @@
 (function() {
   var CANVAS_HEIGHT, CANVAS_WIDTH, DOWN, FIELD_AREA, Game, HEIGHT, H_SCALE, INIT_FPS, LEFT, PathNotFoundError, Point, RIGHT, SearchState, Snake, UP, WIDTH, W_SCALE, isOpposite, randInt, rgba, _ref;
 
-  INIT_FPS = 600;
+  INIT_FPS = 200;
 
   WIDTH = 20;
 
@@ -223,10 +223,10 @@
       this.ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
       for (i = _i = 0, _ref1 = this.snake.body.length; 0 <= _ref1 ? _i < _ref1 : _i > _ref1; i = 0 <= _ref1 ? ++_i : --_i) {
         seg = this.snake.body[i];
-        this.ctx.fillStyle = rgba(0, 0, 127, 1 - 0.7 * (i / this.snake.body.length));
+        this.ctx.fillStyle = rgba(133, 22, 88, 1 - 0.7 * (i / this.snake.body.length));
         this.ctx.fillRect(seg.x * W_SCALE, seg.y * H_SCALE, W_SCALE, H_SCALE);
       }
-      this.ctx.fillStyle = "red";
+      this.ctx.fillStyle = "yellow";
       return this.ctx.fillRect(this.food.x * W_SCALE, this.food.y * H_SCALE, W_SCALE, H_SCALE);
     };
 
@@ -290,7 +290,7 @@
     Game.prototype.isCellFree = function(cell, snake) {
       var _ref1, _ref2;
 
-      return (0 <= (_ref1 = cell.x) && _ref1 < WIDTH)F && (0 <= (_ref2 = cell.y) && _ref2 < HEIGHT) && snake.body.every(function(s) {
+      return (0 <= (_ref1 = cell.x) && _ref1 < WIDTH) && (0 <= (_ref2 = cell.y) && _ref2 < HEIGHT) && snake.body.every(function(s) {
         return !s.equals(cell);
       });
     };
