@@ -2,7 +2,7 @@
 (function() {
   var CANVAS_HEIGHT, CANVAS_WIDTH, DOWN, FIELD_AREA, Game, HEIGHT, H_SCALE, INIT_FPS, LEFT, PathNotFoundError, Point, RIGHT, SearchState, Snake, UP, WIDTH, W_SCALE, isOpposite, randInt, rgba, _ref;
 
-  INIT_FPS = 200;
+  INIT_FPS = 600;
 
   WIDTH = 20;
 
