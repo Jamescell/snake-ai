@@ -223,7 +223,7 @@
       this.ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
       for (i = _i = 0, _ref1 = this.snake.body.length; 0 <= _ref1 ? _i < _ref1 : _i > _ref1; i = 0 <= _ref1 ? ++_i : --_i) {
         seg = this.snake.body[i];
-        this.ctx.fillStyle = rgba(0, 0, 0, 1 - 0.7 * (i / this.snake.body.length));
+        this.ctx.fillStyle = rgba(0, 127, 255, 1 - 0.7 * (i / this.snake.body.length));
         this.ctx.fillRect(seg.x * W_SCALE, seg.y * H_SCALE, W_SCALE, H_SCALE);
       }
       this.ctx.fillStyle = "yellow";
